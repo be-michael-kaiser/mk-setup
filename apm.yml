@@ -1,6 +1,6 @@
-name: mk-petstore2
+name: mk
 version: 1.0.0
-description: APM project for mk-petstore2
+description: APM project for mk domain
 author: Michael Kaiser
 # Which agent platforms to deploy to.
 # Resolution order: --target flag > this field > auto-detect from filesystem.
