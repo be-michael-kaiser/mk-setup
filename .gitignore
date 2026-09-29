@@ -1,0 +1,26 @@
+target/
+node_modules/
+src/main/frontend/generated/
+src/main/bundles/
+package.json
+package-lock.json
+pnpm-lock.yaml
+tsconfig.json
+types.d.ts
+vite.config.ts
+vite.generated.ts
+.vite/
+*.iml
+.idea/
+#.vscode/
+.DS_Store
+
+# APM dependencies
+apm_modules/
+.agents
+
+# GitHub-related files
+.github/agents
+.github/instructions
+.github/prompts
+.github/mcp.json
