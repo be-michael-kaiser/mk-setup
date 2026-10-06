@@ -1,7 +1,7 @@
 # mk-setup
 
 Reusable development setup resources (dev container configuration and APM project files)
-plus a helper script to copy them into any other project folder.
+plus a helper script to copy them into any other project folder. Test change.
 
 ## Contents
 
