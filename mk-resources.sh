@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #
-# mk-resources.sh — copy the .devcontainer directory and the apm files
+# mk-resources.sh — copy the .devcontainer and .github directories and apm files
 # (apm.yml, apm.lock.yaml) from this repository into a target folder.
 #
 set -euo pipefail
 
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 
-RESOURCES=(".devcontainer" "apm.yml" "apm.lock.yaml")
+RESOURCES=(".devcontainer" ".github" "apm.yml" "apm.lock.yaml")
 
 usage() {
     cat <<EOF

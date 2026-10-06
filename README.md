@@ -1,6 +1,6 @@
 # mk-setup
 
-Reusable development setup resources (dev container configuration and APM project files)
+Reusable development setup resources (dev container configuration, GitHub hooks, and APM project files)
 plus a helper script to copy them into any other project folder. Test change.
 
 ## Contents
@@ -8,6 +8,7 @@ plus a helper script to copy them into any other project folder. Test change.
 | Resource | Description |
 | --- | --- |
 | `.devcontainer/` | Dev container definition (`devcontainer.json`, `devcontainer-lock.json`, `setup.sh`) |
+| `.github/` | GitHub hooks and their configuration |
 | `apm.yml` | APM project manifest (targets, dependencies, includes) |
 | `apm.lock.yaml` | Resolved APM dependency lock file |
 | `mk-resources.sh` | Copies the resources above into a target folder |
