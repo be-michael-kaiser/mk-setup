@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# mk-setup.sh — copy the .devcontainer directory and the apm files
+# mk-resources.sh — copy the .devcontainer directory and the apm files
 # (apm.yml, apm.lock.yaml) from this repository into a target folder.
 #
 set -euo pipefail

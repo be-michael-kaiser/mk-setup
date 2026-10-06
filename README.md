@@ -10,19 +10,19 @@ plus a helper script to copy them into any other project folder. Test change.
 | `.devcontainer/` | Dev container definition (`devcontainer.json`, `devcontainer-lock.json`, `setup.sh`) |
 | `apm.yml` | APM project manifest (targets, dependencies, includes) |
 | `apm.lock.yaml` | Resolved APM dependency lock file |
-| `mk-setup.sh` | Copies the resources above into a target folder |
+| `mk-resources.sh` | Copies the resources above into a target folder |
 
 ## Usage
 
 ```bash
-./mk-setup.sh [options] <target-folder>
+./mk-resources.sh [options] <target-folder>
 ```
 
 The script resolves the resources relative to its own location, so it can be called
 from anywhere using an absolute path:
 
 ```bash
-/path/to/mk-setup/mk-setup.sh ~/projects/my-app
+/path/to/mk-setup/mk-resources.sh ~/projects/my-app
 ```
 
 If the target folder does not exist, it is created.
@@ -40,19 +40,19 @@ If the target folder does not exist, it is created.
 Preview the copy without touching the file system:
 
 ```bash
-./mk-setup.sh --dry-run ~/projects/my-app
+./mk-resources.sh --dry-run ~/projects/my-app
 ```
 
 Copy into a new project (existing entries are skipped):
 
 ```bash
-./mk-setup.sh ~/projects/my-app
+./mk-resources.sh ~/projects/my-app
 ```
 
 Refresh an existing setup, replacing the current files:
 
 ```bash
-./mk-setup.sh --force ~/projects/my-app
+./mk-resources.sh --force ~/projects/my-app
 ```
 
 ### Behaviour notes
@@ -74,5 +74,27 @@ Refresh an existing setup, replacing the current files:
 Make the script executable once after cloning:
 
 ```bash
-chmod +x mk-setup.sh
+chmod +x mk-resources.sh
+```
+
+## Worktrees
+
+Create within mk domain (same container + open in context window)
+
+```bash
+./mk-worktree.sh ./../ ./../worktrees/mk-feature-f8 feature/f8
+```
+
+Prune after delete of worktree entry folder
+
+```bash
+./mk-worktree-prune.sh ./../
+```
+
+## Branches
+
+Create on same level as mk domain (full blown feature branch)
+
+```bash
+./mk-branch.sh https://github.com/be-michael-kaiser ./../../mk-feature-f1 feature/f1
 ```
